@@ -35,6 +35,21 @@ function caesarCipher(text, shift, decode = false) {
 
     7- line 25 .join methodumuz return valuemuzdaki işlenmiş tüm karakterleri birleştirir. yani çözülmüş metni döndürür.
 */
+function decode() {
+    const text = document.getElementById("text").value;
+    const shift = parseInt(document.getElementById("shift").value, 10);
+    const result = caesarCipher(text, shift, true);
+    document.getElementById("result").innerText = result;
+}
+/*
+    8- decode fonksiyonu encode fonksiyonu ile tamamen aynı calısıyor. tek farkları caesarCipher fonksiyonundaki decode = false parametremiz cipherimizin default 
+        davranışının encode olmasını saglıyor. cipher fonksiyonumuzun basındaki
+        if blogumuz ise eger decodelamayı secersek shift yanı kaydırma
+        degerimizi negatif yapıyor ki decodelayabilelim. line 56daki 
+        ifademiz ile caesarCipher fonksiyonunda default olarak false olan decode 
+        degerimizi/fonksiyonumuzu trueya ceviriyor ve htmlde bulunan onclick 
+        eventi ile decode fonksiyonumuzu cagırmamızı saglıyor.
+*/
 
 function encode() {
     const text = document.getElementById("text").value;
@@ -44,25 +59,10 @@ function encode() {
 }
 
 /*
-    8- line40-41 const text ve shift yapılarımız html idsi ile user input alır.
+    9- line55-56 const text ve shift yapılarımız html idsi ile user input alır.
         line 42 result yapısı ceaserCipher fonksiyonunu cagırır ve metini şifreler.
         yine html idsi kullanılarak sonuç yazdırılır, line 43.
 
 */
 
-function decode() {
-    const text = document.getElementById("text").value;
-    const shift = parseInt(document.getElementById("shift").value, 10);
-    const result = caesarCipher(text, shift, true);
-    document.getElementById("result").innerText = result;
-}
 
-/*
-    9- decode fonksiyonu encode fonksiyonu ile tamamen aynı calısıyor. tek farkları caesarCipher fonksiyonundaki decode = false parametremiz cipherimizin default 
-        davranışının encode olmasını saglıyor. cipher fonksiyonumuzun basındaki
-        if blogumuz ise eger decodelamayı secersek shift yanı kaydırma
-        degerimizi negatif yapıyor ki decodelayabilelim. line 56daki 
-        ifademiz ile caesarCipher fonksiyonunda default olarak false olan decode 
-        degerimizi/fonksiyonumuzu trueya ceviriyor ve htmlde bulunan onclick 
-        eventi ile decode fonksiyonumuzu cagırmamızı saglıyor.
-*/
