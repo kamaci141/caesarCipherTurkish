@@ -42,10 +42,10 @@ function decode() {
     document.getElementById("result").innerText = result;
 }
 /*
-    8- decode fonksiyonu encode fonksiyonu ile tamamen aynı calısıyor. tek farkları caesarCipher fonksiyonundaki decode = false parametremiz cipherimizin default 
+    8- decode fonksiyonu encode fonksiyonu ile tamamen aynı calısıyor. caesarCipher fonksiyonundaki decode = false parametremiz cipherimizin default 
         davranışının encode olmasını saglıyor. cipher fonksiyonumuzun basındaki
         if blogumuz ise eger decodelamayı secersek shift yanı kaydırma
-        degerimizi negatif yapıyor ki decodelayabilelim. line 56daki 
+        degerimizi negatif yapıyor ki decodelayabilelim. line 41deki 
         ifademiz ile caesarCipher fonksiyonunda default olarak false olan decode 
         degerimizi/fonksiyonumuzu trueya ceviriyor ve htmlde bulunan onclick 
         eventi ile decode fonksiyonumuzu cagırmamızı saglıyor.
@@ -60,8 +60,8 @@ function encode() {
 
 /*
     9- line55-56 const text ve shift yapılarımız html idsi ile user input alır.
-        line 42 result yapısı ceaserCipher fonksiyonunu cagırır ve metini şifreler.
-        yine html idsi kullanılarak sonuç yazdırılır, line 43.
+        line 57 result yapısı ceaserCipher fonksiyonunu cagırır ve metini şifreler.
+        yine html idsi kullanılarak sonuç yazdırılır, line 58.
 
 */
 
